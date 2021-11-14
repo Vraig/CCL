@@ -1,0 +1,90 @@
+.frontpage {
+  background-image: url(https://images.genius.com/7154c6dafd6f6f883c099f033a4aa5e3.1000x1000x1.jpg);
+  text-align: center;
+  image-align:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  color:white;
+  background-color: black;
+  position:relative;
+  top:150px;
+  font-size: 60px;
+}
+.lyrics1{
+  background-image: url(https://th.bing.com/th/id/R.10c88fa1079f64380bac3737df330165?rik=OIBrTn8RDqreuA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f09%2fJ-Cole-Wallpapers-Computer-Download.jpg&ehk=LuVJo9Jw%2fksN7RIDWi8GPOHmTYjpKgERViy9yHSZIns%3d&risl=&pid=ImgRaw&r=0);
+  color:white;
+  background-color: black;
+  text-align: center;
+  image-align:center;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-size: 30px;
+}
+
+
+.songtitle{
+  text-decoration:none;
+}
+.songtitle, .songtitle:hover, .songtitle:active, .songtitle:visited {
+  color: white;
+}
+
+.songtitle::after{
+  content: '';
+  display: block;
+  width:0;
+  height:2px;
+  background:#fff;
+  transition: width.3s;
+}
+
+.songtitle:hover::after{
+  width:100%;
+  transition: width.3s;
+  color:blue;
+}
+
+.singer{
+  text-decoration:none;
+}
+.singer, .singer:hover, .singer:active, .singer:visited {
+  color: white;
+}
+
+.singer::after{
+  content: '';
+  display: block;
+  width:0;
+  height:2px;
+  background:#fff;
+  transition: width.3s;
+}
+
+.singer:hover::after{
+  width:100%;
+  transition: width.3s;
+}
+
+.lyrics{
+  text-decoration:none;
+}
+.lyrics, .lyrics:hover, .lyrics:active, .lyrics:visited {
+  color: white;
+}
+
+.lyrics::after{
+  content: '';
+  display: block;
+  width:0;
+  height:2px;
+  background:#fff;
+  transition: width.3s;
+}
+
+.lyrics:hover::after{
+  width:100%;
+  transition: width.3s;
+}
