@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- This code group references to the favicon and Google fonts used. -->
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- The following lines reference to the used Google fonts. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Work+Sans:wght@300;600;700&display=swap"
+        rel="stylesheet">
+
+     <!-- This code is based from a w3schools.com tutorial and has been modified to meet the required content for TLB -->
+     <script>
+        function startTime() {
+            const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var today = new Date();
+            var d = today.getDate();
+            var y = today.getFullYear();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('time').innerHTML =
+                h + ":" + m + ":" + s;
+            document.getElementById('day').innerHTML = weekday[today.getDay()];
+            document.getElementById('date').innerHTML = month[today.getMonth()] + " " + d + ", " + y;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+
+    <!-- This references to style.css as this html page's stylesheet. -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>About— The Learning Buddy</title>
+</head>
+
+<body onload='startTime()'>
+
+    <!-- This code group contains the side navigation options. -->
+    <div id='side-nav'>
+        <div id='logo-full'>
+            <a href='index.html' style='padding-left: 0;'>
+                <h2 id='logo'>TLB</h2>
+                <h2 id='logo-dot'>.</h2>
+            </a>
+        </div>
+        <img src='resources/nav-radial.png' id='nav-accent'>
+        <div id='upper-side-nav'>
+            <div id='side-nav-option'>
+                <a href='pomodorotimer.html'>Pomodoro Timer</a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='taskmanagement.html'>Task Management</a>
+            </div>
+        </div>
+        <div id='lower-side-nav'>
+            <div id='side-nav-option'>
+                <a href='about.html'>About <img src='resources/help-circle.png'></a>
+            </div>
+          <div id='date-time'>
+                <div id='time'>time</div>
+                <p id='day' style='font-weight: bold;'>day</p>
+                <p id='date'></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- This code group contains the main content of the send feedback page. -->
+    <div id='main-feature'>
+        <!-- main heading -->
+        <div class='feature-heading'>
+            <div class='row'>
+
+
+                <div class='col-11'>
+                    <h1><img src='resources/about.png' style='width: 5%; padding-right: 8px;'>About</h1>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <div class='row' style='width: 90%'>
+            <h2 style='font-size: 30px !important; padding-left: 104px; padding-bottom: 18px;'>Hey there, learning buddy!</h2> <br>
+            <p style='font-size: 14px !important; padding-left: 104px; padding-bottom: 30px;'> <b>The Learning Buddy</b> is a web application that aims to help NYU Shanghai students stay productive and organized.
+                This is a tool for students to manage their time and schoolwork
+                better, which can prove very challenging for some. The application acts like a simplified, user-friendly
+                study toolbox that makes productivity and organization easy for students. </p>
+            <h3 style='padding-left: 104px; padding-bottom: 18px;'><b>Creator</b></h3>
+
+        </div>
+
+        <div id="picture">
+           <div class="creator">
+               <img src='vraig.jpg' style='padding-left: 104px; padding-bottom: 18px' width="600" height="400" />
+               <div class="name" style='padding-left: 280px; padding-bottom: 18px'><b>Vraig De Leon</b>
+                   <br />NYU Shanghai student</div>
+           </div>
+       </div>
+       <div id="description">  maganda si ate karrel</div>
+    </div>
+
+    <img src='resources/main-radial.png' id='main-radial'>
+
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- This references to style.css as this html page's stylesheet. -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- The following lines reference to the used Google fonts. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Work+Sans:wght@300;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- This code is based from a w3schools.com tutorial and has been modified to meet the required content for TLB -->
+    <script>
+        function startTime() {
+            const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var today = new Date();
+            var d = today.getDate();
+            var y = today.getFullYear();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('time').innerHTML =
+                h + ":" + m + ":" + s;
+            document.getElementById('day').innerHTML = weekday[today.getDay()];
+            document.getElementById('date').innerHTML = month[today.getMonth()] + " " + d + ", " + y;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+
+    <title>Pomodoro Timer– The Learning Buddy</title>
+</head>
+
+<body onload='startTime()'>
+
+    <!-- This code group contains the side navigation options. -->
+    <div id='side-nav'>
+        <div id='logo-full'>
+            <a href='index.html' style='padding-left: 0;'>
+                <h2 id='logo'>TLB</h2>
+                <h2 id='logo-dot'>.</h2>
+            </a>
+        </div>
+        <img src='resources/nav-radial.png' id='nav-accent'>
+        <div id='upper-side-nav'>
+            <div id='side-nav-option'>
+                <a href='pomodorotimer.html'>Pomodoro Timer</a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='taskmanagement.html'>Task Management</a>
+            </div>
+        </div>
+        <div id='lower-side-nav'>
+            <div id='side-nav-option'>
+                <a href='about.html'>About <img src='resources/help-circle.png'></a>
+            </div>
+            <div id='date-time'>
+                <div id='time'>time</div>
+                <p id='day' style='font-weight: bold;'>day</p>
+                <p id='date'></p>
+            </div>
+        </div>
+    </div>
+
+    <div id='main-feature'>
+        <div class='feature-heading'>
+            <div class='row'>
+
+                </div>
+
+                <div class='col-11'>
+                    <h1><img src='resources/clock.png' style='width: 5%; padding-right: 8px;'>Pomodoro Timer</h1>
+                    <p>Feeling unmotivated? Get a small part of your task done under 25 minutes.</p>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <p id="pomodoroCaption"> Press start to begin! </p>
+
+        <br>
+
+        <div id="pomodoroTimerContainer">
+            <div id="pomodoroMainTimer">
+                <p id="minutes"> 25 </p>
+                <p id="semicolon">:</p>
+                <p id="seconds"> 00 </p>
+                <!--p id="cycles"> 0 </p-->
+            </div>
+        </div>
+
+        <br><br>
+
+        <div id=pomodoroButtonContainer>
+            <div id=pomodoroButtons>
+                <button id="start" class="btn"><b>Start</b></button>
+                <button id="pause" class="btn"><b>Pause</b></button>
+                <button id="reset" class="btn"><b>Reset</b></button>
+            </div>
+        </div>
+
+        <script src="pomodorotimerfunctionality.js"></script>
+
+
+
+</body>
+
+</html>
